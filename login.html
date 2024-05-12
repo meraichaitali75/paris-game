@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Custom CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+            <li><a href="register.html">Signup</a></li>
+          </ul>
+          <h1 class="logo">
+            <img
+              src="./assets/images/logo.svg"
+              class="logo"
+              alt="The best hand logo"
+            />
+          </h1>
+        </div>
+      </nav>
+      <!-- end: navbar -->
+
+      <!-- main -->
+      <main class="main">
+        <div class="container">
+          <div class="login-content-wrapper">
+            <div class="guest-blocks-left">
+              <img
+                src="./assets/images/no-img.png"
+                class="guest-left-profile"
+                alt="guest-left-profile"
+              />
+            </div>
+            <div class="guest-blocks-right">
+              <h1>Signin ith Paris Game</h1>
+              <div id="successMessage" class="success" style="display: none">
+                Login Successful!
+              </div>
+              <form
+                id="loginForm"
+                onsubmit="return validateForm()"
+                class="forms"
+              >
+                <div class="frm-row">
+                  <input
+                    class="form-control"
+                    type="email"
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    title="Must enter valid email id."
+                  />
+                  <span class="fa field-icon fa-user"></span>
+                </div>
+                <div id="emailError" class="error"></div>
+                <div class="frm-row">
+                  <input
+                    placeholder="Password"
+                    id="password"
+                    class="form-control"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 characters"
+                    required
+                  />
+                  <span
+                    toggle="#password"
+                    class="fa fa-fw fa-eye field-icon toggle-password"
+                  ></span>
+                </div>
+                <div id="passwordError" class="error"></div>
+
+                <div class="btn-row">
+                  <input
+                    type="submit"
+                    value="Sign In"
+                    id="submitBtn"
+                    class="button"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- end: main -->
+
+      <!-- footer -->
+      <footer class="footer">
+        <ul class="footer-nav nav mb-2">
+          <li class="nav-item"><a href="#" class="nav-link">support</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Terms and conditions</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Compliance</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+        </ul>
+        <div class="footer-nav footer-social-icons">
+          <a href="#" class="icons-bg"
+            ><span class="fa fa-facebook fa-fw fa-lg"></span
+          ></a>
+          <a href="#" class="icons-bg"
+            ><span class="fa fa-google fa-fw fa-lg"></span
+          ></a>
+          <a href="#" class="icons-bg"
+            ><span class="fa fa-twitter fa-fw fa-lg"></span
+          ></a>
+        </div>
+      </footer>
+      <!-- Ends: footer -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script>
+      $(".toggle-password").click(function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+    </script>
+  </body>
+</html>

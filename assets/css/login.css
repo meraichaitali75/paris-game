@@ -1,0 +1,116 @@
+/* ********************************* 
+        * login/register css *
+**********************************/
+.login-content-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.login-content-wrapper .guest-blocks-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.login-content-wrapper .guest-blocks-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+}
+.login-content-wrapper .guest-left-profile {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 80%;
+}
+.login-content-wrapper .form-control {
+  border: none;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid red;
+  border-radius: 0px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  padding: 20px;
+}
+.login-content-wrapper .form-control:focus {
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+}
+.login-content-wrapper .field-icon {
+  margin-left: -25px;
+  position: absolute;
+  bottom: 40px;
+  z-index: 2;
+  cursor: pointer;
+  color: #fff;
+}
+.error
+{
+  color: orange;
+  margin: 10px 5px;
+  text-align: left;
+}
+.success
+{
+  color: green;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.login-content-wrapper .forms {
+  width: 100%;
+}
+.login-content-wrapper .forms .frm-row {
+  width: 100%;
+  position: relative;
+}
+/* Style the submit button */
+.msg-container {
+  width: 50%;
+  margin-left: 38px;
+}
+.btn-row
+{
+  display: flex;
+  justify-content: center;
+}
+h6{
+  color: #fff;
+}
+h1{
+  text-align: center;
+}
+/* The message box is shown when the user clicks on the password field */
+#emailMessage,
+#message {
+  display: none;
+  text-align: left;
+  margin: 10px 0;
+}
+#emailMessage p,
+#message p {
+  font-size: 13px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}

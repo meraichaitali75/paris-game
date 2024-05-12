@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Custom CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Signup</a></li>
+          </ul>
+          <h1 class="logo">
+            <img
+              src="./assets/images/logo.svg"
+              class="logo"
+              alt="The best hand logo"
+            />
+          </h1>
+        </div>
+      </nav>
+      <!-- end: navbar -->
 
+      <!-- main -->
+      <main class="main">
+        <div class="game-box">
+          <div class="game-header">
+            <h3>Paris Game</h3>
+            <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+          </div>
+          <div id="game-container"></div>
+          <div class="game-footer">
+            <p id="total-time"></p>
+            <button class="button" id="reset-button">Reset Game</button>
+          </div>
+        </div>
+      </main>
+      <!-- end: main -->
+
+      <!-- footer -->
+      <footer class="footer">
+        <ul class="footer-nav nav mb-2">
+          <li class="nav-item"><a href="#" class="nav-link">support</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Terms and conditions</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Compliance</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+        </ul>
+        <div class="footer-nav footer-social-icons">
+          <a href="#" class="icons-bg"
+            ><span class="fa fa-facebook fa-fw fa-lg"></span
+          ></a>
+          <a href="#" class="icons-bg"
+            ><span class="fa fa-google fa-fw fa-lg"></span
+          ></a>
+          <a href="#" class="icons-bg"
+            ><span class="fa fa-twitter fa-fw fa-lg"></span
+          ></a>
+        </div>
+      </footer>
+      <!-- Ends: footer -->
+    </div>
+    <script src="./assets/js/paris-game.js"></script>
+  </body>
+</html>

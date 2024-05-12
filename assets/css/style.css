@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0b001b;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+/* ********************************* 
+        * custom scroll CSS *
+**********************************/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+/* ********************************* 
+        * NAVBAR CSS *
+**********************************/
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  color: #000;
+  z-index: 100;
+  /* padding: 20px; */
+  /* border-bottom: 1px solid #fa4322; */
+}
+.navbar .logo {
+  height: 100px;
+  background-size: contain;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+.navbar a.active,
+.navbar a:hover {
+  color: #fa4322;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+}
+
+/************************ 
+       footer css
+*************************/
+
+.main-wrapper .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid #aba8b1;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+.main-wrapper .footer-nav {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+}
+
+.main-wrapper .footer-nav .nav-link {
+  font-size: 12px;
+  color: #fff;
+  text-transform: capitalize;
+  border-bottom: 2px solid transparent;
+  padding: 0;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.main-wrapper .footer-nav .nav-link:focus,
+.main-wrapper .footer-nav .nav-link:hover {
+  color: #fa4322;
+  background-color: transparent;
+}
+
+.main-wrapper .footer-nav .icons-bg {
+  background: transparent linear-gradient(0deg, #ff956d 0%, #fa4322 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: 0px 0px 10px #fa4322;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-wrapper .footer-nav .icons-bg:hover {
+  border: 2px solid #fff;
+  background: transparent;
+}
+
+@media screen and (max-width: 1500px) {
+  .main-wrapper .footer-nav .nav-link {
+    font-size: 13px;
+  }
+  .main-wrapper .footer-nav .icons-bg {
+    height: 25px;
+    width: 25px;
+    font-size: 10px;
+  }
+}
+
+/* ********************************* 
+        * paris game css *
+**********************************/
+.main {
+  padding-top: 110px;
+}
+#game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.game-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent linear-gradient(0deg, #0b001b 0%, #d04b31 80%) 0% 0%
+    no-repeat padding-box;
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px #aaa;
+}
+.game-header,
+.game-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+h3,
+h1,
+p {
+  color: #fff;
+}
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  background: transparent linear-gradient(0deg, #ff956d 0%, #fa4322 100%) 0% 0%
+    no-repeat padding-box;
+  color: #fff;
+  border-radius: 35px;
+  border: 4px solid #fa4322;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 30px;
+  outline: none;
+}
+.button:hover {
+  background: transparent;
+}
+
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 100px;
+  height: 140px;
+  background-image: url(../images/no-img.png);
+  background-position: center;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background-size: cover;
+}
+.flipped {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+.reverse {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+.correct {
+  opacity: 0.5;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+/* Icons */
+.correct[data-item="AS"],
+.flipped[data-item="AS"] {
+  background: url("../images/AS.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+.correct[data-item="KS"],
+.flipped[data-item="KS"] {
+  background: url("../images/KS.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+.correct[data-item="QS"],
+.flipped[data-item="QS"] {
+  background: url("../images/QS.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+.correct[data-item="JS"],
+.flipped[data-item="JS"] {
+  background: url("../images/JS.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+.correct[data-item="10S"],
+.flipped[data-item="10S"] {
+  background: url("../images/10S.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+
+/* about css */
+.about-banner {
+  display: flex;
+  align-items: center;
+}
+.about-banner .about-left-box {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+}
+.about-banner about-left-box1 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+}
+.about-banner .about-right-box {
+ padding-left: 50px;
+}
+.about-banner h1 {
+  color: #b30000;
+}
+.about-banner p {
+  padding: 20px 0;
+}
